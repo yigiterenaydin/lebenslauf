@@ -2,8 +2,6 @@
 
 import { useState, useEffect, useRef } from "react";
 import { Link } from "react-scroll";
-import { BiLogoTypescript, BiLogoTailwindCss } from "react-icons/bi";
-// ...existing code...
 import CustomButton from "../shared/CustomButton";
 
 export const Navbar = () => {
