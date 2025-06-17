@@ -35,14 +35,8 @@ export const Certificate = () => {
     },
   ];
 
-  const otherCertificates = {
-    title: "View all my Certificates🏆 ",
-    link: "https://www.linkedin.com/in/mehmeettoprakk/details/certifications/",
-  };
-
   // PDF veya linki direkt indir veya aç
   const handleDirectDownload = (certif: ICertif) => {
-    // Eğer link bir PDF ise yeni sekmede açılır veya indirilir
     const isPdf = certif.link.endsWith(".pdf");
     if (isPdf) {
       const aTag = document.createElement("a");
@@ -64,14 +58,15 @@ export const Certificate = () => {
       </h1>
 
       <p className="text-primary text-base my-3 lg:text-xl text-center">
-        Zeugnisse, die ich während meiner Schulzeit erhalten habe.{" "}
+        Zeugnisse, die ich während meiner Schulzeit erhalten habe.
       </p>
 
       <div className="grid md:grid-cols-2 my-3 w-full lg:w-5/6 gap-6">
         {expertCerficiates.map((expert) => (
           <div
             key={expert.img}
-            className="md:mx-4 mb-6 md:mb-0 border border-borderColor bg-tertiary rounded-md hover:shadow-lg hover:border-transparent transition-all duration-300 hover:bg-gradient-to-r hover:from-orange-400 hover:to-red-500 group">
+            className="md:mx-4 mb-6 md:mb-0 border border-borderColor bg-tertiary rounded-md hover:shadow-lg hover:border-transparent transition-all duration-300 hover:bg-gradient-to-r hover:from-orange-400 hover:to-red-500 group"
+          >
             <div className="bg-black flex justify-center items-center border rounded-sm border-whites shadow-lg ">
               <Image
                 src={expert.img}
