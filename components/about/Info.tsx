@@ -83,7 +83,7 @@ export const Info = () => {
         </p>
       </div>
 
-      <hr className="w-36 my-3 p-1 bg-gradient-to-r from-purple-500 to-red-500 border-none rounded-sm" />
+      <hr className="w-46 my-3 p-1 bg-gradient-to-r from-purple-500 to-red-500 border-none rounded-sm" />
 
       <div className="grid grid-cols-2 md:grid-cols-3 gap-x-2 lg:max-w-lg my-4 lg:my-0">
         {contacts.map((contact) => (

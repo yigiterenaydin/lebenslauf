@@ -1,46 +1,63 @@
 "use client";
 
-import { FaUtensils, FaSwimmer, FaCamera, FaTree, FaMusic, FaWalking, FaFileExcel, FaFileWord } from "react-icons/fa";
+import {
+  FaUtensils,
+  FaSwimmer,
+  FaCamera,
+  FaTree,
+  FaMusic,
+  FaWalking,
+  FaFileExcel,
+  FaFileWord,
+} from "react-icons/fa";
 import { MdSportsMartialArts } from "react-icons/md";
 import { FiCode } from "react-icons/fi";
 import { toast } from "react-hot-toast";
 
 export const BackEndStacks = () => {
   const hobbies = [
-    { title: "Kochen", icon: <FaUtensils size={28} /> },
-    { title: "Kung-Fu", icon: <MdSportsMartialArts size={28} /> },
-    { title: "Schwimmen", icon: <FaSwimmer size={28} /> },
-    { title: "Musik hören", icon: <FaMusic size={28} /> },
-    { title: "Natur", icon: <FaTree size={28} /> },
-    { title: "Fotografieren", icon: <FaCamera size={28} /> },
-    { title: "Reisen", icon: <FaWalking size={28} /> },
-    { title: "Word", icon: <FaFileWord size={28} /> },
-    { title: "Excel", icon: <FaFileExcel size={28} /> },
-    { title: "Programmieren", icon: <FiCode size={28} /> },
+    { title: "Kochen", icon: <FaUtensils /> },
+    { title: "Kung-Fu", icon: <MdSportsMartialArts /> },
+    { title: "Schwimmen", icon: <FaSwimmer /> },
+    { title: "Musik hören", icon: <FaMusic /> },
+    { title: "Natur", icon: <FaTree /> },
+    { title: "Fotografieren", icon: <FaCamera /> },
+    { title: "Reisen", icon: <FaWalking /> },
+    { title: "Word", icon: <FaFileWord /> },
+    { title: "Excel", icon: <FaFileExcel /> },
+    { title: "Programmieren", icon: <FiCode /> },
   ];
 
   const onHandleClick = (title: string) => {
-    toast.success(`${title} ausgewählt`, {
-      icon: "🎯",
+    toast.success(title.toUpperCase(), {
+      icon: "🔥",
       style: {
         border: "1px solid #3e3e3e",
-        background: "#fff",
-        color: "#222",
+        background: "#111",
+        color: "#fff",
+        fontWeight: "bold",
+        fontSize: "16px",
+        textTransform: "uppercase",
       },
     });
   };
 
   return (
-    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-8 w-full">
+    <>
       {hobbies.map((hobby) => (
         <div
           key={hobby.title}
-          className="flex flex-col items-center p-5 border border-gray-700 bg-gray-900 rounded-xl shadow cursor-pointer hover:bg-gradient-to-r hover:from-gray-800 hover:to-gray-700 transition-all duration-300"
+          className="p-3 md:p-4 border border-borderColor bg-tertiary rounded-sm cursor-pointer transition-all duration-300 hover:border-transparent hover:shadow-lg hover:bg-gradient-to-r hover:from-orange-400 hover:to-red-500 group"
           onClick={() => onHandleClick(hobby.title)}
         >
-          <div className="text-2xl text-white">{hobby.icon}</div>
+          <p
+            className="flex justify-center items-center text-gray-400 text-5xl group-hover:text-white transition-colors duration-300"
+            title={hobby.title}
+          >
+            {hobby.icon}
+          </p>
         </div>
       ))}
-    </div>
+    </>
   );
 };

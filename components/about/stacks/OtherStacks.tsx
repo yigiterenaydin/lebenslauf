@@ -1,50 +1,45 @@
 "use client";
 
-import { toast } from "react-hot-toast";
+interface Reference {
+  name: string;
+  email: string;
+  phone: string;
+  job: string;
+}
 
-import {
-  SiGithub,
-  SiVercel,
-  SiFigma,
-  SiPython,
-  SiOpenai,
-} from "react-icons/si";
+const references: Reference[] = [
+  {
+    name: "Thomas Seinige",
+    email: "thomas.seinige@schulen.zuerich.ch",
+    phone: "Nach fragen",
+    job: "Klassenlehrer",
+  },
+  {
+    name: "Cyrill Lam",
+    email: "zuerich@skema.ch",
+    phone: "044 401 40 42",
+    job: "Kung-Fu Lehrer",
+  },
+];
 
-export const OtherStacks = () => {
-  const stacks = [
-    { title: "GitHub", icon: <SiGithub /> },
-    { title: "Vercel", icon: <SiVercel /> },
-    { title: "Figma", icon: <SiFigma /> },
-    { title: "Python", icon: <SiPython /> },
-    { title: "OpenAI", icon: <SiOpenai /> },
-  ];
-
-  const onHandleClick = (title: string) => {
-    toast.success(`Skilled in ${title} `, {
-      icon: "🔥",
-      style: {
-        border: "1px solid #3e3e3e",
-        background: "#111",
-        color: "#fff",
-      },
-    });
-  };
-
-  return (
-    <>
-      {stacks.map((stack) => (
+export const OtherStacks = () => (
+  <div className="w-full max-w-2xl mx-auto my-0">
+    <div className="flex flex-col gap-4">
+      {references.map((ref) => (
         <div
-          key={stack.title}
-          className="p-3 md:p-4 border border-borderColor bg-tertiary rounded-sm cursor-pointer transition-all duration-300 hover:border-transparent hover:shadow-lg hover:bg-gradient-to-r hover:from-orange-400 hover:to-red-500 group"
-          onClick={() => onHandleClick(stack.title)}>
-          <p
-            key={stack.title}
-            className="flex justify-center items-center text-gray-400 text-5xl group-hover:text-white transition-colors duration-300"
-            title={stack.title}>
-            {stack.icon}
+          key={ref.email}
+          className="border border-borderColor bg-tertiary rounded-md p-4 shadow hover:shadow-lg transition"
+        >
+          <p className="font-semibold text-xs text-white">{ref.name}</p>
+          <p className="text-primary text-xs break-words mb-4">{ref.job}</p>
+          <p className="text-gray-400 text-xs mt-2 break-all">
+            <span className="font-medium">E-Mail:</span> {ref.email}
+          </p>
+          <p className="text-gray-400 text-xs">
+            <span className="font-medium">Telefon:</span> {ref.phone}
           </p>
         </div>
       ))}
-    </>
-  );
-};
+    </div>
+  </div>
+);

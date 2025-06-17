@@ -52,7 +52,8 @@ export const Navbar = () => {
       ref={refHead}
       className={`bg-gradient-to-r from-black via-gray-900 to-black bg-opacity-70 backdrop-blur-md fixed top-0 left-0 w-full z-50 shadow-lg transition duration-300  ease-in-out pt-2 ${
         isScrolled ? "navbar-fixed" : " "
-      }`}>
+      }`}
+    >
       <div className="container mx-auto px-4 flex items-center justify-between">
         <Link
           to="home"
@@ -60,7 +61,8 @@ export const Navbar = () => {
           smooth={true}
           offset={0}
           duration={500}
-          className="flex cursor-pointer text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600 text-2xl font-extrabold py-5 md:py-6 items-center">
+          className="flex cursor-pointer text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600 text-2xl font-extrabold py-5 md:py-6 items-center"
+        >
           Erens Navigation.
         </Link>
         <div className="hidden lg:flex ml-auto items-center space-x-8">
@@ -73,7 +75,8 @@ export const Navbar = () => {
                   smooth={true}
                   offset={0}
                   duration={500}
-                  className="cursor-pointer text-primary text-lg py-2 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-purple-400 group-hover:to-pink-600 transition-all duration-300">
+                  className="cursor-pointer text-primary text-lg py-2 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-purple-400 group-hover:to-pink-600 transition-all duration-300"
+                >
                   {navigation.title}
                 </Link>
               </li>
@@ -88,23 +91,28 @@ export const Navbar = () => {
           />
         </div>
 
+        {/* Mobil hamburger menü */}
         <div className="lg:hidden flex items-center">
           <button
-            className="focus:outline-none"
+            className="flex flex-col justify-center items-center w-10 h-10 space-y-1.5 focus:outline-none"
             onClick={toggleMenu}
-            aria-label="Toggle Menu">
-            <div
-              className={`hamburger-line ${
-                isMenuOpen ? "rotate-45" : ""
-              }`}></div>
-            <div
-              className={`hamburger-line ${
-                isMenuOpen ? "opacity-0" : "opacity-100"
-              }`}></div>
-            <div
-              className={`hamburger-line ${
-                isMenuOpen ? "-rotate-45" : ""
-              }`}></div>
+            aria-label="Toggle Menu"
+          >
+            <span
+              className={`block h-1 w-8 rounded bg-white transition-all duration-300 ${
+                isMenuOpen ? "rotate-45 translate-y-2" : ""
+              }`}
+            ></span>
+            <span
+              className={`block h-1 w-8 rounded bg-white transition-all duration-300 ${
+                isMenuOpen ? "opacity-0" : ""
+              }`}
+            ></span>
+            <span
+              className={`block h-1 w-8 rounded bg-white transition-all duration-300 ${
+                isMenuOpen ? "-rotate-45 -translate-y-2" : ""
+              }`}
+            ></span>
           </button>
         </div>
         {isMenuOpen && (
@@ -119,7 +127,8 @@ export const Navbar = () => {
                     offset={0}
                     duration={500}
                     onClick={closeMenu}
-                    className="text-white text-lg hover:text-pink-400 cursor-pointer">
+                    className="text-white text-lg hover:text-pink-400 cursor-pointer"
+                  >
                     {navigation.title}
                   </Link>
                 </li>
