@@ -8,12 +8,11 @@ import { Skills } from "@/components/about/Skills";
 import { Journey } from "@/components/experience/Journey";
 import { Certificate } from "@/components/experience/Certificate";
 import { ProjectLists } from "@/components/projects/ProjectLists";
-// Footer importunu silebilirsin
-
+import ScrollToTopButton from "@/components/shared/ScrollToTopButton";
 export default function Home() {
   return (
     <main className="container">
-      <section id="home" className="pt-28 pb-24 lg:pt-44 lg:pb-32">
+      <section id="home" className="pt-16 pb-4 lg:pt-24 lg:pb-8">
         <div className="flex flex-col lg:flex-row">
           <div className="w-full self-center md:px-4 lg:w-1/2">
             <Welcome />
@@ -21,7 +20,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section id="about" className="pb-16 pt-32 lg:pb-28">
+      <section id="about" className="pb-8 pt-8 lg:pb-12 lg:pt-12">
         <div className="flex flex-col lg:flex-row">
           <div className="w-full self-center md:px-4 lg:w-1/2 text-justify">
             <Info />
@@ -48,11 +47,10 @@ export default function Home() {
       <section id="projects" className="pb-16 pt-32 lg:pb-28">
         <ProjectLists />
       </section>
-      {/* Skills sadece Footer'dan önce, bir kere */}
       <section id="skills" className="pb-16 pt-32 lg:pb-28">
         <Skills />
       </section>
-      {/* <Footer /> BURADA OLMAMALI */}
+      <ScrollToTopButton />
     </main>
   );
 }
