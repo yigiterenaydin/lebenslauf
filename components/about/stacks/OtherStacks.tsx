@@ -22,24 +22,26 @@ const references: Reference[] = [
   },
 ];
 
-export const OtherStacks = () => (
-  <div className="w-full max-w-2xl mx-auto my-0">
-    <div className="flex flex-col gap-4">
+export const OtherStacks = () => {
+  return (
+    <div className="w-full flex flex-col gap-6 px-4">
       {references.map((ref) => (
         <div
           key={ref.email}
-          className="border border-borderColor bg-tertiary rounded-md p-4 shadow hover:shadow-lg transition"
+          className="flex flex-col gap-1 border border-borderColor bg-tertiary rounded-md p-4 shadow hover:shadow-lg transition w-full"
         >
-          <p className="font-semibold text-xs text-white">{ref.name}</p>
-          <p className="text-primary text-xs break-words mb-4">{ref.job}</p>
-          <p className="text-gray-400 text-xs mt-2 break-all">
+          <div className="flex items-center gap-3">
+            <span className="font-semibold text-base text-white">{ref.name}</span>
+            <span className="text-sm text-gray-400 whitespace-nowrap">{ref.job}</span>
+          </div>
+          <div className="text-gray-400 text-sm break-all">
             <span className="font-medium">E-Mail:</span> {ref.email}
-          </p>
-          <p className="text-gray-400 text-xs">
+          </div>
+          <div className="text-gray-400 text-sm">
             <span className="font-medium">Telefon:</span> {ref.phone}
-          </p>
+          </div>
         </div>
       ))}
     </div>
-  </div>
-);
+  );
+};

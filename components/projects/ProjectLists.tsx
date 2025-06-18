@@ -208,15 +208,13 @@ export const ProjectLists = () => {
   };
 
   return (
-    <div className="mt-10 w-full self-center flex flex-col items-center justify-center">
-      <h1 className="text-base font-medium text-primary md:text-xl text-center">
-        Schnupperlehren{" "}
-        <span className="block font-bold text-transparent text-4xl mt-1 lg:text-5xl bg-clip-text bg-gradient-to-r from-purple-400 via-pink-500 to-red-500">
+    <div className="mt-16 w-full self-center flex flex-col items-center justify-center">
+      <span className="block font-bold text-transparent text-4xl mt-1 lg:text-5xl bg-clip-text bg-gradient-to-r from-purple-400 via-pink-500 to-red-500">
           Portfolio
         </span>
-      </h1>
+     
 
-      <hr className="w-36 my-3 p-1 bg-gradient-to-r from-purple-500 to-red-500 border-none rounded-sm" />
+      <hr className="w-96 my-3 p-1 bg-gradient-to-r from-purple-500 to-red-500 border-none rounded-sm" />
 
       <p className="text-primary text-base my-6 lg:text-xl text-center">
         Meine bisherigen Schnupperlehren
