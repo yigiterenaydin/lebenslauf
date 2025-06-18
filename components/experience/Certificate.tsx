@@ -52,50 +52,56 @@ export const Certificate = () => {
   };
 
   return (
-    <div className="mt-10 w-full self-center flex flex-col items-center justify-center">
-      <h1 className="font-bold text-transparent text-3xl mt-3 lg:text-4xl bg-clip-text bg-gradient-to-r from-purple-400 via-pink-500 to-red-500">
-        Meine Zeugnisse
-      </h1>
+    <div className="w-full max-w-6xl mx-auto">
+      <div className="text-center mb-8">
+        <h2 className="font-extrabold text-transparent text-4xl lg:text-5xl bg-clip-text bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 mb-4">
+          Meine Zeugnisse
+        </h2>
 
-      <p className="text-primary text-base my-3 lg:text-xl text-center">
-        Zeugnisse, die ich während meiner Schulzeit erhalten habe.
-      </p>
+        <div className="w-72 h-1 bg-gradient-to-r from-purple-500 to-red-500 rounded-full mx-auto mb-6"></div>
 
-      <div className="grid md:grid-cols-2 my-3 w-full lg:w-5/6 gap-6">
+        <p className="text-primary text-lg lg:text-xl max-w-2xl mx-auto">
+          Zeugnisse, die ich während meiner Schulzeit erhalten habe.
+        </p>
+      </div>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         {expertCerficiates.map((expert) => (
           <div
             key={expert.img}
-            className="md:mx-4 mb-6 md:mb-0 border border-borderColor bg-tertiary rounded-md hover:shadow-lg hover:border-transparent transition-all duration-300 hover:bg-gradient-to-r hover:from-orange-400 hover:to-red-500 group"
+            className="border border-borderColor bg-tertiary rounded-xl overflow-hidden hover:shadow-xl hover:border-transparent transition-all duration-300 hover:bg-gradient-to-r hover:from-orange-400 hover:to-red-500 group transform hover:scale-105"
           >
-            <div className="bg-black flex justify-center items-center border rounded-sm border-whites shadow-lg ">
+            <div className="bg-black flex justify-center items-center border-b border-borderColor">
               <Image
                 src={expert.img}
                 alt={expert.name || "Certificate"}
                 width={400}
                 height={300}
-                className="w-full h-auto mx-auto rounded-sm"
+                className="w-full h-auto"
               />
             </div>
 
-            <div className="flex flex-col px-5">
-              <p className="my-3 font-bold text-justify text-base lg:text-xl text-white group-hover:text-white">
+            <div className="p-6 space-y-3">
+              <h3 className="font-bold text-lg lg:text-xl text-white group-hover:text-white">
                 {expert.name}
-              </p>
-              <p className="mb-2 text-primary group-hover:text-white">
+              </h3>
+              <p className="text-primary group-hover:text-white text-sm lg:text-base">
                 {expert.from}
               </p>
-              <p className="mb-2 text-primary group-hover:text-white">
+              <p className="text-primary group-hover:text-white text-sm lg:text-base">
                 {expert.issued}
               </p>
-              <p className="mb-2 text-primary group-hover:text-white">
-                {expert.credential}
-              </p>
+              {expert.credential && (
+                <p className="text-primary group-hover:text-white text-sm lg:text-base">
+                  {expert.credential}
+                </p>
+              )}
 
               <CustomButton
                 btnType="button"
                 title="Zeugnis ansehen und herunterladen"
-                containerStyles="w-full border-borderColor bg-black hover:bg-gradient-to-r hover:from-purple-500 hover:to-blue-500 hover:shadow-lg trasition-all duration-300"
-                textStyles="text-white"
+                containerStyles="w-full mt-4 border-borderColor bg-black hover:bg-gradient-to-r hover:from-purple-500 hover:to-blue-500 hover:shadow-lg transition-all duration-300 rounded-lg py-3"
+                textStyles="text-white font-semibold"
                 onClick={() => handleDirectDownload(expert)}
               />
             </div>

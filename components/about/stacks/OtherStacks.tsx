@@ -17,24 +17,44 @@ export const OtherStacks = () => {
   ];
 
   return (
-    <div className="mt-10 w-full self-center flex flex-col items-center justify-center px-2">
-      <div className="grid grid-cols-1 gap-8 w-full">
+    <div className="w-full max-w-4xl mx-auto">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {references.map((ref) => (
           <div
             key={ref.email}
-            className="w-full max-w-xl mx-auto border border-borderColor bg-tertiary rounded-lg shadow-md hover:shadow-lg transition-transform hover:scale-105 duration-300 hover:border-transparent group"
+            className="border border-borderColor bg-tertiary rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:border-purple-500/50 hover:bg-gradient-to-r hover:from-gray-800 hover:to-gray-900 group transform hover:scale-105"
           >
-            <div className="flex flex-col px-5 py-6">
-              <p className="font-bold text-xl text-white mb-2">
+            <div className="space-y-3">
+              <h3 className="font-bold text-xl text-white group-hover:text-white">
                 {ref.name}
+              </h3>
+              
+              <p className="text-gray-300 text-base font-medium group-hover:text-white">
+                {ref.job}
               </p>
-              <p className="text-primary text-base mb-2">{ref.job}</p>
-              <p className="text-gray-400 text-sm break-all mb-1">
-                <span className="font-medium">E-Mail:</span> {ref.email}
-              </p>
-              <p className="text-gray-400 text-sm">
-                <span className="font-medium">Telefon:</span> {ref.phone}
-              </p>
+              
+              <div className="space-y-2 pt-2">
+                <div className="flex flex-col gap-1">
+                  <span className="text-sm font-semibold text-gray-400 group-hover:text-gray-200">
+                    E-Mail:
+                  </span>
+                  <a 
+                    href={`mailto:${ref.email}`}
+                    className="text-blue-400 hover:text-blue-300 text-sm break-all transition-colors duration-200"
+                  >
+                    {ref.email}
+                  </a>
+                </div>
+                
+                <div className="flex flex-col gap-1">
+                  <span className="text-sm font-semibold text-gray-400 group-hover:text-gray-200">
+                    Telefon:
+                  </span>
+                  <span className="text-gray-300 text-sm group-hover:text-white">
+                    {ref.phone}
+                  </span>
+                </div>
+              </div>
             </div>
           </div>
         ))}

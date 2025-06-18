@@ -59,7 +59,7 @@ export const Navbar = () => {
           to="home"
           spy={true}
           smooth={true}
-          offset={0}
+          offset={-80}
           duration={500}
           className="flex cursor-pointer text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600 text-2xl font-extrabold py-5 md:py-6 items-center"
         >
@@ -73,7 +73,7 @@ export const Navbar = () => {
                   to={navigation.to}
                   spy={true}
                   smooth={true}
-                  offset={0}
+                  offset={-80}
                   duration={500}
                   className="cursor-pointer text-primary text-lg py-2 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-purple-400 group-hover:to-pink-600 transition-all duration-300"
                 >
@@ -124,7 +124,7 @@ export const Navbar = () => {
                     to={navigation.to}
                     spy={true}
                     smooth={true}
-                    offset={0}
+                    offset={-80}
                     duration={500}
                     onClick={closeMenu}
                     className="text-white text-lg hover:text-pink-400 cursor-pointer"

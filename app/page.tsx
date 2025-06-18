@@ -9,47 +9,50 @@ import { Journey } from "@/components/experience/Journey";
 import { Certificate } from "@/components/experience/Certificate";
 import { ProjectLists } from "@/components/projects/ProjectLists";
 import ScrollToTopButton from "@/components/shared/ScrollToTopButton";
+
 export default function Home() {
   return (
-    <main className="container">
-      <section id="home" className="pt-16 pb-4 lg:pt-24 lg:pb-8">
-        <div className="flex flex-col lg:flex-row">
-          <div className="w-full self-center md:px-4 lg:w-1/2">
-            <Welcome />
+    <main className="container mx-auto px-4 lg:px-8">
+      <section id="home" className="min-h-screen flex items-center pt-16 pb-16 lg:pt-20 lg:pb-20">
+        <div className="w-full lg:w-1/2">
+          <Welcome />
+          <div className="mt-8">
             <Status />
           </div>
         </div>
       </section>
-      <section id="about" className="pb-8 pt-8 lg:pb-12 lg:pt-12">
-        <div className="flex flex-col lg:flex-row">
-          <div className="w-full self-center md:px-4 lg:w-1/2 text-justify">
+      
+      <section id="about" className="py-16 lg:py-20">
+        <div className="flex flex-col lg:flex-row gap-12 lg:gap-16 items-start">
+          <div className="w-full lg:w-1/2 text-justify">
             <Info />
           </div>
-          <div className="w-full px-4 pt-4 self-center lg:w-1/2 shadow-lg border-2 border-borderColor rounded-md bg-tertiary">
-            <Image
-              src="/photo/Eren.png"
-              alt="Eren"
-              width={400}
-              height={400}
-              className="w-auto sm:h-[400px] mx-auto"
-            />
+          <div className="w-full lg:w-1/2 flex justify-center lg:justify-start lg:mt-16">
+            <div className="w-96 h-96 lg:w-[500px] lg:h-[500px] relative rounded-2xl overflow-hidden shadow-2xl border-2 border-borderColor bg-tertiary">
+              <Image
+                src="/photo/Eren.png"
+                alt="Eren"
+                fill
+                className="object-cover"
+              />
+            </div>
           </div>
         </div>
       </section>
-      <section id="experience" className="pb-16 pt-32 lg:pb-28">
-        <div className="flex flex-col lg:flex-row">
-          <div className="w-full self-center md:px-4 lg:w-2/3 text-justify">
-            <Journey />
-          </div>
-        </div>
+      
+      <section id="experience" className="py-16 lg:py-20">
+        <Journey />
         <Certificate />
       </section>
-      <section id="projects" className="pb-16 pt-32 lg:pb-28">
+      
+      <section id="projects" className="py-16 lg:py-20">
         <ProjectLists />
       </section>
-      <section id="skills" className="pb-16 pt-32 lg:pb-28">
+      
+      <section id="skills" className="py-16 lg:py-20">
         <Skills />
       </section>
+      
       <ScrollToTopButton />
     </main>
   );

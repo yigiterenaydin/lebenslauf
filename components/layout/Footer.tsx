@@ -62,7 +62,7 @@ const Footer = () => {
                 Erens Navigation.
               </h2>
             </div>
-            <hr className="w-42 my-3 mx-auto md:mx-0 p-1 bg-gradient-to-r from-purple-500 to-pink-500 border-none rounded-sm" />
+            <div className="w-72 h-1 bg-gradient-to-r from-purple-500 to-red-500 rounded-full my-3 mx-auto md:mx-0"></div>
 
             <div id="contact" className="w-full md:w-1/3">
               <h3 className="mb-4 text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-500 to-pink-600 whitespace-nowrap w-max inline-block mx-auto md:mx-0">

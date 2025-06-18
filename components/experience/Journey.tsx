@@ -21,33 +21,33 @@ export const Journey = () => {
   ];
 
   return (
-    <>
-      <h1 className="text-base font-medium text-primary md:text-xl">
-        Erfahrungen {" "}
-        <span className="block font-bold text-transparent text-4xl mt-1 lg:text-5xl bg-clip-text bg-gradient-to-r from-purple-400 via-pink-500 to-red-500">
+    <div className="max-w-6xl">
+      <h1 className="text-lg font-medium text-primary md:text-xl lg:text-2xl mb-2">
+        Erfahrungen{" "}
+        <span className="block font-extrabold text-transparent text-5xl mt-3 mb-6 lg:text-6xl bg-clip-text bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 leading-tight">
           Meine Schulzeit und Zeugnisse
         </span>
       </h1>
 
-      <hr className="w-58 my-3 p-1 bg-gradient-to-r from-purple-500 to-red-500 border-none rounded-sm" />
+      <div className="w-96 h-1 bg-gradient-to-r from-purple-500 to-red-500 rounded-full mb-8"></div>
 
-      <div className="grid lg:grid-cols-2 my-4 gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
         {experiences.map((experience) => (
           <div
             key={experience.place}
-            className="bg-tertiary border border-borderColor rounded-md p-4 transition-all duration-300 hover:bg-gradient-to-r hover:from-orange-400 hover:to-red-500 hover:shadow-lg cursor-pointer group">
-            <p className="text-justify font-bold text-white text-lg col-span-2">
+            className="bg-tertiary border border-borderColor rounded-xl p-6 transition-all duration-300 hover:bg-gradient-to-r hover:from-orange-400 hover:to-red-500 hover:shadow-xl hover:border-orange-400/50 cursor-pointer group transform hover:scale-105">
+            <h3 className="text-lg font-bold text-white mb-3 group-hover:text-white">
               {experience.place}
-              <span className="block font-normal text-slate-200 mt-1 text-base group-hover:text-white">
-                {experience.title}
-              </span>
-              <span className="block font-normal text-primary mt-1 text-sm group-hover:text-gray-200">
-                {experience.timespan}
-              </span>
+            </h3>
+            <h4 className="font-semibold text-slate-200 mb-2 text-base group-hover:text-white">
+              {experience.title}
+            </h4>
+            <p className="text-primary text-sm group-hover:text-gray-200">
+              {experience.timespan}
             </p>
           </div>
         ))}
       </div>
-    </>
+    </div>
   );
 };

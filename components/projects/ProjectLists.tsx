@@ -208,7 +208,7 @@ export const ProjectLists = () => {
   };
 
   return (
-    <div className="mt-16 w-full self-center flex flex-col items-center justify-center">
+    <div className="mt-2 w-full self-center flex flex-col items-center justify-center">
       <span className="block font-bold text-transparent text-4xl mt-1 lg:text-5xl bg-clip-text bg-gradient-to-r from-purple-400 via-pink-500 to-red-500">
           Portfolio
         </span>
