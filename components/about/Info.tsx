@@ -35,7 +35,7 @@ export const Info = () => {
       background: "#111",
       confirmButtonColor: "#000",
       showCloseButton: true,
-      confirmButtonText: ` <a href=${contact.href} target="blank">  In neuem Tab öffnen!🔥 /a>`,
+      confirmButtonText: `<a href=${contact.href} target="blank">In neuem Tab öffnen!🔥</a>`,
       icon: "info",
     });
   };
@@ -67,10 +67,7 @@ export const Info = () => {
           Ich denke, dass mir der Beruf als KV-Mitarbeiter in einer Bank am meisten gefallen würde.{" "}
           <span className="text-yellow-400 font-semibold">Es wäre mein Wunsch</span>,{" "}
           <span className="text-purple-400 font-semibold">in diesem Bereich</span>, eine Lehrstelle zu finden{" "}
-          <span className="text-red-400 font-semibold">und diesen wichtigen Schritt</span> in meinem Leben.
-        </p>
-
-        <p className="text-gray-300 hover:text-white transition-colors duration-300">
+          <span className="text-red-400 font-semibold">und diesen wichtigen Schritt</span> in meinem Leben{" "}
           <span>
             erfolgreich abzuschließen.{" "}
             <span className="text-teal-400 font-bold">
