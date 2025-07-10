@@ -13,12 +13,80 @@ import {
 
 export const ProjectLists = () => {
   const projects = [
+        {
+      name: "Zürcher Kantonalbank Schnupperparcours KV Branche Bank",
+      description:
+        "Ich erhielt einen vielseitigen Einblick in die kaufmännische Ausbildung bei der Zürcher Kantonalbank, inklusive Tätigkeiten, Lehrablauf, Lernorte sowie Austausch mit Mitarbeitenden und Informationen zum Bewerbungsprozess..",
+      link: "/certif/KBSP.pdf",
+      img: "/project/KBSP.png",
+      stacks: [
+        {
+          name: "Python",
+          logo: <SiPython className="text-white w-7 h-7" />,
+        },
+        {
+          name: "OpenAI",
+          logo: <SiOpenai className="text-white w-7 h-7" />,
+        },
+      ],
+    },
     {
       name: "Zürcher Kantonalbank ",
       description:
         "Einblick in die Zürcher Kantonalbank und ihre Ausbildungswelt, erste Erfahrungen in der Informatik, Gestaltung einer einfachen Website mit HTML/CSS sowie Austausch mit Lernenden, Mitarbeitenden und Ausbildungsverantwortlichen.",
       link: "/certif/KB5.pdf",
       img: "/project/KB.png",
+      stacks: [
+        {
+          name: "Python",
+          logo: <SiPython className="text-white w-7 h-7" />,
+        },
+        {
+          name: "OpenAI",
+          logo: <SiOpenai className="text-white w-7 h-7" />,
+        },
+      ],
+    },
+        {
+      name: "UBS BANK ",
+      description:
+        "Ich erhielt einen spannenden Einblick in zentrale Aufgabenbereiche der UBS, lernte spielerisch bankspezifische Themen kennen und bekam Informationen zur Lehre und zum Rekrutierungsprozess, ergänzt durch Gespräche mit Lernenden und Mitarbeitenden.",
+      link: "/certif/ubs.pdf",
+      img: "/project/UBS.png",
+      stacks: [
+        {
+          name: "Python",
+          logo: <SiPython className="text-white w-7 h-7" />,
+        },
+        {
+          name: "OpenAI",
+          logo: <SiOpenai className="text-white w-7 h-7" />,
+        },
+      ],
+    },
+    {
+      name: "Kornhaus Verwaltungs AG ",
+      description:
+        "Ich erhielt einen spannenden Einblick in zentrale Aufgabenbereiche der Kornhaus Verwaltung.",
+      link: "/certif/korn.pdf",
+      img: "/project/KORN.png",
+      stacks: [
+        {
+          name: "Python",
+          logo: <SiPython className="text-white w-7 h-7" />,
+        },
+        {
+          name: "OpenAI",
+          logo: <SiOpenai className="text-white w-7 h-7" />,
+        },
+      ],
+    },
+    {
+      name: "Ergon Smart Software ",
+      description:
+        "Ich erhielt einen Einblick in die Applikationsentwicklung bei Ergon Informatik AG, lernte Projekte und Anforderungen kennen und konnte mich mit Lernenden austauschen.",
+      link: "/certif/ergon.pdf",
+      img: "/project/ERGON.png",
       stacks: [
         {
           name: "Python",
@@ -48,11 +116,11 @@ export const ProjectLists = () => {
       ],
     },
     {
-      name: "Zürcher Kantonalbank.",
+      name: "Zürcher KantonalbankInformationsveranstaltung KV Branche Bank Mediamatik.",
       description:
-        "Informationsveranstaltung Informatik & Entwicklung digitales Business.",
+        "Ich erhielt einen Einblick in die Zürcher Kantonalbank, den Ablauf der KV- und Mediamatik-Lehre, lernte die drei Lernorte kennen und tauschte mich mit Lernenden und Ausbildungsverantwortlichen aus.",
       link: "/certif/KB4.pdf",
-      img: "/project/KB2.png",
+      img: "/project/KB4.png",
       stacks: [
         {
           name: "Java",
@@ -82,9 +150,9 @@ export const ProjectLists = () => {
       ],
     },
     {
-      name: "Zürcher Kantonalbank",
+      name: "Zürcher Kantonalbank Informationsveranstaltung Informatik Entwicklung digitales Business",
       description:
-        "Informationsveranstaltung Informatik & Entwicklung digitales Business.",
+        "Ich lernte die Zürcher Kantonalbank und ihre Ausbildungswelt kennen, erhielt Einblick in die IT- und EDB-Lehre, die drei Lernorte sowie den Bewerbungsprozess und konnte mich mit Lernenden und Ausbildungsverantwortlichen austauschen.",
       link: "/certif/KB2.pdf",
       img: "/project/KB3.png",
       stacks: [
@@ -98,12 +166,12 @@ export const ProjectLists = () => {
         },
       ],
     },
-    {
-      name: "Zürcher Kantonalbank",
+        {
+      name: "EWZ Berufsinformations Veranstaltung",
       description:
-        "Informationsveranstaltung KV Branche Bank & Mediamatik.",
-      link: "/certif/KB1.pdf",
-      img: "/project/KB4.png",
+        "Ich durfte einen spannenden Schnuppertag bei EWZ erleben. Dabei erhielt ich einen Einblick in die Tätigkeiten und Ausbildungswege des Unternehmens. Ich konnte Fragen stellen, mich mit Mitarbeitenden und Lernenden austauschen und habe ein besseres Verständnis für die verschiedenen Berufsmöglichkeiten bei EWZ gewonnen.",
+      link: "/certif/EWZ.pdf",
+      img: "/project/EWZ.png",
       stacks: [
         {
           name: "Python",
@@ -165,31 +233,7 @@ export const ProjectLists = () => {
         },
       ],
     },
-    {
-      name: "Ergon Software",
-      description:
-        "Einblick in die ICT-Lehrberufe und Applikationsentwicklung bei Ergon Informatik AG, inklusive Voraussetzungen, Auswahl, praktische Übungen und Austausch mit Lernenden.",
-      link: "/certif/Ergon.pdf",
-      img: "/project/ERGON.png",
-      stacks: [
-        {
-          name: "React",
-          logo: <SiReact className="text-white w-7 h-7" />,
-        },
-        {
-          name: "Tailwind CSS",
-          logo: <BiLogoTailwindCss className="text-white w-7 h-7" />,
-        },
-        {
-          name: "Javascript",
-          logo: <BiLogoJavascript className="text-white w-7 h-7" />,
-        },
-        {
-          name: "Typescript",
-          logo: <BiLogoTypescript className="text-white w-7 h-7" />,
-        },
-      ],
-    },
+
   ];
 
   // PDF ise direkt indir, değilse yeni sekmede aç
