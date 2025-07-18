@@ -17,7 +17,7 @@ export const Certificate = () => {
   const expertCerficiates = [
     {
       name: "Zweite Klasse der Sekundarschule",
-      from: "Zeugnis des 1. Semesters der 2. Klasse der Sekundarschule",
+      from: "Mein Zeugnisse des zweiten Sekundarstufe",
       issued: "Ausgestellt im Februar 2025",
       credential: "",
       title: "Go to Credential Page💳",
