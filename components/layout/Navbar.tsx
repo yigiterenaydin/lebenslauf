@@ -135,7 +135,7 @@ export const Navbar = () => {
               ))}
               <CustomButton
                 btnType="submit"
-                title="Resume"
+                title="Lebenslauf"
                 containerStyles="border border-borderColor bg-gradient-to-r from-purple-500 to-pink-500 hover:from-pink-500  hover:to-red-500 text-white py-[8x] rounded-lg shadow-md hover:shadow-lg transition-all duration-300"
                 textStyles="text-white"
                 onClick={() => downloadFile(cv_file_url)}
