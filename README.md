@@ -1,36 +1,85 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 📡 Jes online () Mein Lebenslauf
 
-## Getting Started
+Dies ist ein modernes Webprojekt, das mit [Next.js](https://nextjs.org/) und [Tailwind CSS](https://tailwindcss.com/) entwickelt wurde. Es bietet eine performante, responsive und modulare Architektur für zeitgemäße Webanwendungen.
 
-First, run the development server:
+Die Anwendung ist live erreichbar unter:  
+🔗 [www.jes.ch](https://www.jes.ch)
+
+---
+
+## 🚀 Funktionen
+
+- ⚡️ Verwendung des Next.js 13 App-Routers (App-Verzeichnis)
+- 🎨 Responsive Design mit Tailwind CSS
+- 🔧 Unterstützung für ESLint & TypeScript
+- 🧩 Wiederverwendbare Komponentenstruktur (`Komponenten`)
+- 🌍 Deployment über Vercel
+
+---
+
+## 📁 Projektstruktur
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+.
+├── App/                # Seiten und Layoutstruktur
+├── Komponenten/        # Wiederverwendbare UI-Komponenten
+├── Öffentlich/         # Öffentlicher Ordner (Bilder etc.)
+├── tailwind.config.ts  # Tailwind-Konfiguration
+├── next-env.d.ts       # Next.js TypeScript Umgebung
+├── nächste.config.mjs  # Next.js Konfigurationsdatei
+├── postcss.config.mjs  # PostCSS Einstellungen
+├── tsconfig.json       # TypeScript Konfiguration
+└── README.md           # Diese Datei
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🔧 Installation
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Um das Projekt lokal auszuführen, befolge bitte diese Schritte im Terminal:
 
-## Learn More
+```bash
+# 1. Repository klonen
+git clone https://github.com/yigiterenaydin/lebenslauf.git
 
-To learn more about Next.js, take a look at the following resources:
+# 2. In das Projektverzeichnis wechseln
+cd jes
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+# 3. Abhängigkeiten installieren
+npm install
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+# 4. Entwicklungsserver starten
+npm run dev
+```
 
-## Deploy on Vercel
+> 💡 Hinweis: Du benötigst eine aktuelle Node.js-Version auf deinem System.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🧪 Skripte
+
+| Befehl           | Beschreibung                            |
+|------------------|------------------------------------------|
+| `npm run dev`    | Startet den Entwicklungsserver           |
+| `npm run build`  | Erstellt einen Produktions-Build         |
+| `npm run lint`   | Führt eine Codeanalyse mit ESLint durch  |
+
+---
+
+## 📦 Deployment
+
+Diese Anwendung wurde mit [Vercel](https://vercel.com/) veröffentlicht.  
+Live-Demo: 👉 [www.jes.ch](https://jes.ch)
+
+---
+
+## 👨‍💻 Entwickler
+
+**Adnan Aydin**  
+GitHub: [@yigiterenaydin](https://github.com/yigiterenaydin)
+
+---
+
+## 📄 Lizenz
+
+Dieses Projekt ist unter der MIT-Lizenz lizenziert.
